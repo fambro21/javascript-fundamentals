@@ -129,4 +129,21 @@
   }
 
   const results = century;
+
+  // Type Conversion
+  const inputYear = "1991";
+  const conversion1 = Number(inputYear);
+  const conversion2 = Number(inputYear) + 18;
+
+  const conversion3 = Number("Jonas");
+  const conversion4 = typeof NaN;
+  const conversion5 = String(23);
+
+  // Type Coercion
+  const coercion = "I am " + 23 + " years old";
+  const coercion2 = "23" - "10" - 3;
+  const coercion3 = "23" / "2";
+
+  let n = "1" + 1;
+  n = n - 1;
 })();
