@@ -48,4 +48,15 @@
   job3 = "teacher";
 
   lastName = "Schmedtman";
+
+  // Basic Operators
+  // Math Operators
+  const now = 2037;
+  const ageJonas = now - 1991;
+  const ageSarah = now - 2018;
+
+  const power = ageJonas * 2 * (ageJonas / 10) * 2 ** 3;
+  const firstName2 = "Jonas";
+  const lastName2 = "Schmedtmann";
+  const fullName = firstName2 + " " + lastName2;
 })();
