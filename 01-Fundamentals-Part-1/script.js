@@ -85,4 +85,28 @@
   x2 = y2 = 25 - 10 - 5;
 
   const averageAge = (ageJonas2 + ageSarah2) / 2;
+
+  // Strings and Template Literals
+  const firstName4 = "Jonas";
+  const job4 = "teacher";
+  const birthYear4 = "1991";
+  const year4 = 2037;
+
+  const jonas =
+    "I'm " +
+    firstName4 +
+    ", a " +
+    (year4 - birthYear4) +
+    " year old " +
+    " job4 " +
+    "!";
+
+  const jonasNew = `I'm ${firstName4}, a ${year4 - birthYear4} year old ${job4}!`;
+  const templateString = `Just a regular string....`;
+  const templateString2 =
+    "String with \n\
+    multiple \n\
+    lines";
+
+  const templateString3 = `String multiple lines`;
 })();
