@@ -21,4 +21,20 @@
 
   let job1 = "programmer";
   let job2 = "teacher";
+
+  // Data Types
+  let javascriptIsFun = true;
+  let _typeOfBoolean = typeof true;
+  let _typeOfNumber = typeof 23;
+  let _typeOfString = typeof "Jonas";
+
+  javascriptIsFun = "YES!";
+
+  let year;
+  let _typeOfUnderfind = year;
+
+  year = 1991;
+
+  let _typeOfNumber3 = year;
+  let _typeOfNull = typeof null;
 })();
