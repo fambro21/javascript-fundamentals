@@ -146,4 +146,26 @@
 
   let n = "1" + 1;
   n = n - 1;
+
+  // Truthy and Falsy Values
+  // 5 Fasly values: 0, '', undefined, null, NaN
+  const falsyValues1 = Boolean(0);
+  const falsyValues2 = Boolean(undefined);
+  const truthyValues1 = Boolean("Jonathan");
+  const truthyValues2 = Boolean({});
+  const truthyValues3 = Boolean("");
+
+  const money = 100;
+  if (money) {
+    option1 = "Don't spend it all ;)";
+  } else {
+    option2 = "You should get a job!";
+  }
+
+  let height = 0;
+  if (height) {
+    option3 = "YAY! Height is defined";
+  } else {
+    option4 = "Height is UNDEFINED";
+  }
 })();
