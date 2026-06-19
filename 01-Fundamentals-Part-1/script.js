@@ -173,4 +173,54 @@
   const age3 = "18";
   if (age3 === 18) option5 = "You just became an adult :D (strict)";
   if (age3 == 18) option6 = "You just became an adult :D (loose)";
+
+  // Logical Operators
+  const hasDriverLicense = true;
+  const hasGoodVision = true;
+
+  const andResult = hasDriverLicense && hasGoodVision;
+  const orResults = hasDriverLicense || hasGoodVision;
+
+  const notResults = !hasDriverLicense;
+
+  let drivingResults = undefined;
+  if (hasDriverLicense && hasGoodVision) {
+    drivingResults = "Sarah is able to drive!";
+  } else {
+    drivingResults = "Some else should drive";
+  }
+
+  const isTired = false;
+  drivingResults = hasDriverLicense && hasGoodVision && isTired;
+
+  // The Switch Statement
+  let day = "friday";
+
+  switch (day) {
+    case "monday":
+      process = "Plan course structure";
+      process = "Go to coding meetup";
+      break;
+    case "tuesday":
+      process = "Prepare theory videos";
+      break;
+    case "wednesday":
+    case "thursday":
+      process = "Write code examples";
+      break;
+    case "friday":
+      process = "Record videos";
+      break;
+    case "saturday":
+    case "sunday":
+      process = "Enjoy the weekend :D";
+      break;
+    default:
+      process = "Not a valid day!";
+  }
+
+  // The Conditional (Ternary) Operator
+  const age4 = 23;
+  const wineDrinker = age4 >= 18 ? "wine 🍷" : "water 💧";
+  console.log(`I like to drink ${age4 >= 18 ? "wine 🍷" : "water 💧"}`);
 })();
