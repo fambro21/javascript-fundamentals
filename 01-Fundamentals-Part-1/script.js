@@ -168,4 +168,9 @@
   } else {
     option4 = "Height is UNDEFINED";
   }
+
+  // Equality Operators: == vs ===
+  const age3 = "18";
+  if (age3 === 18) option5 = "You just became an adult :D (strict)";
+  if (age3 == 18) option6 = "You just became an adult :D (loose)";
 })();
