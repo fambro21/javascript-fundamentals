@@ -59,4 +59,30 @@
   const firstName2 = "Jonas";
   const lastName2 = "Schmedtmann";
   const fullName = firstName2 + " " + lastName2;
+
+  // Assignment operators
+  let x = 10 + 5;
+  x += 10;
+  x *= 4;
+  x++;
+  x--;
+
+  // Comparison operators
+  let comparison1 = ageJonas > ageSarah;
+  let comparison2 = ageSarah >= 18;
+
+  const isFullAge = ageSarah >= 18;
+  let comparison3 = now - 1991 > now - 2018;
+
+  // Operator Precedence
+  const now2 = 2037;
+  const ageJonas2 = now2 - 1991;
+  const ageSarah2 = now2 - 2018;
+
+  let comparison4 = now2 - 1991 > now2 - 2018;
+
+  let x2, y2;
+  x2 = y2 = 25 - 10 - 5;
+
+  const averageAge = (ageJonas2 + ageSarah2) / 2;
 })();
