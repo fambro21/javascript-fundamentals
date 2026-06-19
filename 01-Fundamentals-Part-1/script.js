@@ -37,4 +37,15 @@
 
   let _typeOfNumber3 = year;
   let _typeOfNull = typeof null;
+
+  // let, const, and var
+  let age = 30;
+  age = 31;
+
+  const birthYear = 1991;
+
+  var job3 = "programmer";
+  job3 = "teacher";
+
+  lastName = "Schmedtman";
 })();
