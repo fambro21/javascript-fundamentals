@@ -39,4 +39,17 @@
     return 2037 - birthYear;
   };
   const age2 = calcAge2(1991);
+
+  // Arrow Functions
+  const calcAge3 = (birthYear) => 2037 - birthYear;
+  const ag3 = calcAge3(1991);
+
+  const yearsUntilRetirement = (birthYear, firstName) => {
+    const age = 2037 - birthYear;
+    const retirement = 65 - age;
+    return `${firstName} retires in ${retirement} years`;
+  };
+
+  const retirementResults1 = yearsUntilRetirement(1991, "Jonas");
+  const retirementResults2 = yearsUntilRetirement(1980, "Bob");
 })();
