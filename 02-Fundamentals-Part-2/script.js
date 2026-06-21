@@ -83,4 +83,39 @@
 
   const retirementResults3 = yearsUntilRetirement2(1991, "Jonas");
   const retirementResults4 = yearsUntilRetirement2(1950, "Mike");
+
+  // Introductions to Arrays
+  const friend1 = "Michael";
+  const friend2 = "Steven";
+  const friend3 = "Peter";
+
+  const friends = ["Michael", "Steven", "Peter"];
+
+  const y = new Array(1991, 1984, 2008, 2020);
+  const arrayPosition1 = friends[0];
+  const arrayPosition2 = friends[2];
+
+  const arrayLength = friends.length;
+  const lastArray = friends.length - 1;
+
+  const arrayPosition3 = (friends[2] = "Jay");
+  const entireArray = friends;
+
+  const firstName = "Jonas";
+  const jonas = [firstName, "Jonathan", 2037 - 1991, "teacher", friends];
+  const joansLength = jonas.length;
+
+  const calcAge4 = function (birthYear) {
+    return 2037 - birthYear;
+  };
+
+  const years = [1990, 1967, 2002, 2018];
+
+  const age4 = calcAge4(years[0]);
+  const age5 = calcAge4(years[1]);
+  const age6 = calcAge4(years[years.length - 1]);
+
+  const ages7 = [
+    calcAge4(years[0], calcAge4(years[1]), calcAge4(years[years.length - 1])),
+  ];
 })();
