@@ -118,4 +118,25 @@
   const ages7 = [
     calcAge4(years[0], calcAge4(years[1]), calcAge4(years[years.length - 1])),
   ];
+
+  // Basic Array Operations (Methods)
+  const friends2 = ["Michael", "Steven", "Peter"];
+
+  // Add elements
+  const newFriendsArray = friends2.push("Jay");
+
+  friends2.unshift("John");
+
+  // Remove elements
+  friends2.pop();
+  const popped = friends2.pop();
+  friends2.shift();
+
+  const checkingIndex1 = friends2.includes("Steven");
+  const checkingIndex2 = friends2.includes("Bob");
+  const checkingIndex3 = friends2.includes(23);
+
+  if (friends2.includes("Steven")) {
+    const results = "You have a friend called Steven";
+  }
 })();
