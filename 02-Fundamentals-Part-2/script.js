@@ -232,4 +232,92 @@
   for (let rep = 1; rep <= 30; rep++) {
     console.log(`Lifting weights repetition ${rep} 🏋🏿‍♂️`);
   }
+
+  // Looping Arrays, Breaking and Continuing
+  const jonas5 = [
+    "Jonas",
+    "Schmedtmann",
+    2037 - 1991,
+    "teacher",
+    ["Michael", "Peter", "Steven"],
+    true,
+  ];
+
+  const types = [];
+
+  jonas5[0];
+  jonas5[1];
+  jonas5[4];
+
+  for (let i = 0; i < jonas5.length; i++) {
+    (jonas5[i], typeof jonas5[i]);
+
+    // Filling types array
+    types[i] = typeof jonas5[i];
+    types.push(typeof jonas5[i]);
+  }
+
+  types;
+
+  const years2 = [1991, 2007, 1969, 2020];
+  const ages8 = [];
+
+  for (let i = 0; i < years2.length; i++) {
+    ages8.push(2037 - years2[i]);
+  }
+
+  ages8;
+
+  // continue and break
+  for (let i = 0; i < jonas5.length; i++) {
+    if (typeof jonas5[i] !== "string") continue;
+
+    console.log(jonas5, typeof jonas5[i]);
+  }
+
+  for (let i = 0; i < jonas5.length; i++) {
+    if (typeof jonas5[i] === "number") break;
+    console.log(jonas5[i], typeof jonas5[i]);
+  }
+
+  // Looping Backwards and Loops in Loops
+  const jonas6 = [
+    "Jonas",
+    "Schmedtmann",
+    2037 - 1991,
+    "teacher",
+    ["Michael", "Peter", "Steven"],
+    true,
+  ];
+
+  for (let i = jonas6.length - 1; i >= 0; i--) {
+    console.log(i, jonas6[i]);
+  }
+
+  for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`------ Starting exercise ${exercise}`);
+
+    for (let rep = 1; rep < 6; rep++) {
+      console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋🏿‍♂️"`);
+    }
+  }
+
+  // The while loop
+  for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep} 🏋🏿‍♂️`);
+  }
+
+  let rep = 1;
+  while (rep <= 10) {
+    console.log(`WHILE: Lifting weights repetition ${rep}`);
+    rep++;
+  }
+
+  let dice = Math.trunc(Math.random() * 6) + 1;
+
+  while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log("Loop is about to end...");
+  }
 })();
