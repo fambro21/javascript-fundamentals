@@ -180,4 +180,39 @@
   jonas["twitter"] = "@jonsschmedtman";
 
   jonas;
+
+  // Object Methods
+  const jonas4 = {
+    firstName: "Jonas",
+    lastName: "Schmedtmann",
+    birthYear: 1991,
+    job: "teacher",
+    friends: ["Michael", "Peter", "Steven"],
+    hasDriversLicense: true,
+
+    calcAge1: function (birthYear) {
+      return 2037 - birthYear;
+    },
+
+    calcAge2: function () {
+      console.log(this);
+      return 2037 - this.birthYear;
+    },
+
+    calcAge3: function () {
+      this.age = 2037 - this.birthYear;
+      return this.age;
+    },
+
+    getSummary: function () {
+      return `${this.firstName} is a ${this.calcAge1()}-year old ${
+        jonas.job
+      }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
+    },
+  };
+
+  jonas4.calcAge3();
+  jonas4.age;
+  jonas4.age;
+  jonas4.age;
 })();
