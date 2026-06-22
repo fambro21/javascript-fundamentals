@@ -100,4 +100,37 @@
 
   const f = jonas.calcAge;
   f();
+
+  // Regular Functions vs. Arrow Functions
+  var firstName2 = "Matilda";
+
+  const jonas2 = {
+    firstName: "Jonas",
+    year: 1991,
+    calcAge: function () {
+      console.log(this);
+      console.log(2037 - this.year);
+
+      const self = this;
+      const isMillenial = function () {
+        self;
+        self.year >= 1981 && self.year <= 1996;
+      };
+
+      const isMillenial2 = () => {
+        this;
+        this.year >= 1981 && this.year <= 1996;
+      };
+
+      isMillenial();
+      isMillenial2();
+    },
+
+    greet: () => {
+      console.log(this);
+      console.log(`Hey ${this.firstName}`);
+    },
+  };
+  jonas2.greet();
+  jonas2.calcAge();
 })();
