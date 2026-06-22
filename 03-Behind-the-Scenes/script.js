@@ -133,4 +133,19 @@
   };
   jonas2.greet();
   jonas2.calcAge();
+
+  // arguments keyword
+  const addExpr2 = function (a, b) {
+    console.log(arguments);
+    return a + b;
+  };
+
+  addExpr2(2, 5);
+  addExpr2(2, 5, 8, 12);
+
+  var addArrow = (a, b) => {
+    return a + b;
+  };
+
+  addArrow(2, 5, 8);
 })();
