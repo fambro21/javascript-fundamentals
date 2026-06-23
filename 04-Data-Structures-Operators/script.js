@@ -112,4 +112,47 @@
   console.log(new String("jonas"));
 
   console.log(typeof new String("jonas").slice(1));
+
+  // Working With Strings - Part 2
+  const airline2 = "TAP Air Portugal";
+
+  console.log(airline2.toLowerCase());
+  console.log(airline2.toUpperCase());
+
+  // Fix captialization in name
+  const passenger = "jOnAS";
+  const passengerLower = passenger.toLowerCase();
+  const passengerCorrect =
+    passengerLower[0].toUpperCase() + passengerLower.slice(1);
+  console.log(passengerCorrect);
+
+  // Comparing emails
+  const email = "hello@jonas.io";
+  const loginEmail = " Hello@Jonas.Io \n";
+
+  const lowerEmail = loginEmail.toLowerCase();
+  const trimmedEmail = loginEmail.trim();
+  const normalizedEmail = loginEmail.toLowerCase().trim();
+  console.log(normalizedEmail);
+  console.log(email === normalizedEmail);
+
+  // replacing
+  const priceGB = "288,97£";
+  const priceUS = priceGB.replace("£", "$").replace(",", ".");
+  console.log(priceUS);
+
+  const announcement =
+    "All passengers come to boarding door 23. Boarding door 23!";
+  console.log(announcement.replace("door", "gate"));
+  console.log(announcement.replaceAll("door", "gate"));
+
+  // Booleans
+  const plane2 = "Airbus A320neo";
+  console.log(plane2.includes("A320"));
+  console.log(plane2.includes("Boeing"));
+  console.log(plane2.startsWith("Airb"));
+
+  if (plane2.startsWith("Airbus") && plane2.endsWith("neo")) {
+    console.log("Part of the NEW ARirbus family");
+  }
 })();
