@@ -252,4 +252,54 @@
   console.log(rest.size);
 
   console.log(rest.get(arr));
+
+  // New Operations to make sets useful!
+  const italianFoods = new Set([
+    "pasta",
+    "gnocchi",
+    "tomatoes",
+    "olive oil",
+    "garlic",
+    "basil",
+  ]);
+
+  const mexicianFoods = new Set([
+    "tortialls",
+    "beans",
+    "rice",
+    "tomatoes",
+    "avocado",
+    "garlic",
+  ]);
+
+  const commonFoods = italianFoods.intersection(mexicianFoods);
+  console.log("Intersection", commonFoods);
+  console.log([...commonFoods]);
+
+  const italianMexicanFusion = italianFoods.union(mexicianFoods);
+  console.log("Union", italianMexicanFusion);
+
+  const uniqueItalianFoods = italianFoods.difference(mexicianFoods);
+  console.log("Difference italian", uniqueItalianFoods);
+
+  const uniqueItalianAndMexicanFoods =
+    italianFoods.symmetricDifference(mexicianFoods);
+  console.log(uniqueItalianAndMexicanFoods);
+
+  console.log(italianFoods.isDisjointFrom(mexicianFoods));
+
+  // Sets
+  const ordersSet = new Set(["Pasta", "Pizza", "Risotto", "Pasta", "Pizza"]);
+  console.log(ordersSet);
+
+  console.log(new Set("Jonas"));
+
+  console.log(ordersSet.size);
+  console.log(ordersSet.has("Pizza"));
+  console.log(ordersSet.has("Bread"));
+  ordersSet.add("Garlic Bread");
+  ordersSet.add("Garlic Bread");
+  console.log(ordersSet);
+
+  for (const order of ordersSet) console.log(order);
 })();
