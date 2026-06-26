@@ -412,4 +412,103 @@
 
   console.log("Hello" && 23 && null && "jonas");
   restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
+
+  // Rest Pattern and Parameters
+  // 1) Destructuring
+
+  // SPREAD, because of Right side of =
+  const arr2 = [1, 2, ...[3, 4]];
+
+  // REST, because of LEFT side of =
+  const [a, b, ...others] = [1, 2, 3, 4, 5];
+  console.log(a, b, others);
+
+  const [pizza, , risotto, ...otherFood] = [
+    ...restaurant.mainMenu,
+    ...restaurant.starterMenu,
+  ];
+  console.log(pizza, risotto, otherFood);
+
+  // Objects
+  const { sat, ...weekdays2 } = restaurant.openingHours;
+  console.log(weekdays2);
+
+  // 2) Functions
+  const add = function (...numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+    console.log(sum);
+  };
+
+  add(2, 3);
+  add(5, 3, 7, 2);
+  add(8, 2, 5, 3, 2, 1, 4);
+
+  const x = [23, 5, 7];
+  add(...x);
+
+  restaurant.orderPizza("mushrooms", "onions", "olives", "spinach");
+  restaurant.orderPizza("mushrooms");
+
+  // The Spread Operator (...)
+
+  const arr3 = [7, 8, 9];
+  const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+  console.log(badNewArr);
+
+  const newArr = [1, 2, ...arr3];
+  console.log(newArr);
+
+  console.log(...newArr);
+  console.log(1, 2, 7, 8, 9);
+
+  const newMenu = [...restaurant.mainMenu, "Gnocci"];
+  console.log(newMenu);
+
+  // Copy array
+  const mainMenuCopy = [...restaurant.mainMenu];
+
+  // Join 2 arrays
+  const menu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
+  console.log(menu2);
+
+  // Iterables: arrays, strings, maps, sets, NOT objects
+  const str = "Jonas";
+  const letters = [...str, " ", "S."];
+  console.log(letters);
+  console.log(...str);
+
+  // Objects
+  const newRestaurant = { foundedIn: 1998, ...restaurant, founder: "Guiseppe" };
+  console.log(newRestaurant);
+
+  const restaurantCopy = { ...restaurant };
+  restaurantCopy.name = "Ristorante Roma";
+  console.log(restaurantCopy.name);
+
+  // Destructuring Arrays
+  const arr4 = [2, 3, 4];
+  const a1 = arr4[0];
+  const b1 = arr4[1];
+  const c1 = arr4[2];
+
+  const [x1, y1, z1] = arr4;
+  console.log(x1, y1, z1);
+  console.log(arr4);
+
+  let [main, , secondary] = restaurant.categories;
+  console.log(main, secondary);
+
+  // Receive 2 return values from a function
+  const [starter, mainCourse] = restaurant.order(2, 0);
+  console.log(starter, mainCourse);
+
+  // Nested destructuing
+  const nested = [2, 4, [5, 6]];
+  const [i, , [j, k]] = nested;
+  console.log(i, j, k);
+
+  // Default values
+  const [p = 1, q = 1, r = 1] = [8, 9];
+  console.log(p, q, r);
 })();
